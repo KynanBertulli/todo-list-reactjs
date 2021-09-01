@@ -35,6 +35,17 @@ class App extends Component {
       count: this.state.count - 1,
     });
   };
+  getDate = () => {
+    var today = new Date();
+    var date = today.getDate();
+    var month = today.getMonth() + 1; // Since getMonth() returns month from 0-11 not 1-12
+    var year = today.getFullYear();
+
+    var dateStr = date + "/" + month + "/" + year;
+
+    console.log(dateStr);
+    return dateStr;
+  };
   render() {
     // const buttonText = this.state.visible ? "hide" : "show";
     // const slider = this.state.visible ? <Counter /> : null;
@@ -60,6 +71,8 @@ class App extends Component {
           increment={this.handleButtonClick}
           decrement={this.handleButtonClick2}
         /> */}
+        <h2>My To-Do App</h2>
+        <h5>today is: {this.getDate()}</h5>
         <TodoList />
       </div>
     );

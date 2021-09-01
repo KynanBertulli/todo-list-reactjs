@@ -87,11 +87,14 @@ export default class TodoList extends React.Component {
         <button onClick={() => this.updateTodoToShow("complete")}>
           complete
         </button>
-        {this.state.todos.some((todo) => todo.complete) ? (
-          <button onClick={() => this.removeAllTodoThatAreComplete()}>
-            remove all complete todos
-          </button>
-        ) : null}
+        <div>
+          {this.state.todos.some((todo) => !todo.complete) ? (
+            <button onClick={() => this.removeAllTodoThatAreComplete()}>
+              remove all complete todos
+            </button>
+          ) : null}
+        </div>
+
         <div>
           <button
             onClick={() =>
@@ -104,7 +107,7 @@ export default class TodoList extends React.Component {
               })
             }
           >
-            toggle all complete : {`${this.state.toggleAllComplete}`}
+            toggle to-do's : {`${this.state.toggleAllComplete}`}
           </button>
         </div>
       </div>

@@ -56,14 +56,13 @@ export default class ValidationForm extends React.Component {
             placeholder="name"
             value={this.state.name}
             onChange={this.handleChange}
-          ></input>{" "}
+          ></input>
           {this.state.nameError ? (
             <div style={{ fontSize: 12, color: "red" }}>
-              {" "}
-              {this.state.nameError}{" "}
+              {this.state.nameError}
             </div>
-          ) : null}{" "}
-        </div>{" "}
+          ) : null}
+        </div>
         <div>
           <input
             name="email"
@@ -88,8 +87,7 @@ export default class ValidationForm extends React.Component {
           ></input>{" "}
           {this.state.passwordError ? (
             <div style={{ fontSize: 12, color: "red" }}>
-              {" "}
-              {this.state.passwordError}{" "}
+              {this.state.passwordError}
             </div>
           ) : null}{" "}
         </div>{" "}
